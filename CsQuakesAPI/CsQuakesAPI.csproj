@@ -117,8 +117,8 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\QuakesController.cs" />
-    <Compile Include="Controllers\tvf_Quakes_State_vs_State_ResultController.cs" />
-    <Compile Include="Controllers\usp_Quakes_State_vs_State_ResultController.cs" />
+    <Compile Include="Controllers\tvfQuakesStateVsStateController.cs" />
+    <Compile Include="Controllers\uspQuakesStateVsStateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

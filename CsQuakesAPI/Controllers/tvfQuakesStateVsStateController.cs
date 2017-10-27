@@ -22,16 +22,16 @@ namespace CsQuakesAPI.Controllers
     using System.Web.Http.OData.Extensions;
     using CsQuakesAPI;
     ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
-    builder.EntitySet<tvf_Quakes_State_vs_State_Result>("tvf_Quakes_State_vs_State_Result");
+    builder.EntitySet<tvf_Quakes_State_vs_State_Result>("tvfQuakesStateVsState");
     config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
     */
-    public class tvf_Quakes_State_vs_State_ResultController : ODataController
+    public class tvfQuakesStateVsStateController : ODataController
     {
         private earthquakesEntities db = new earthquakesEntities();
 
-        // GET: odata/tvf_Quakes_State_vs_State_Result?state1='Arizona'&state2='Kansas'&$orderby=cc,Year desc,admin1
+        // GET: odata/tvfQuakesStateVsState?state1='Arizona'&state2='Kansas'&$orderby=cc,Year desc,admin1
         [EnableQuery]
-        public IQueryable<tvf_Quakes_State_vs_State_Result> Gettvf_Quakes_State_vs_State_Result([FromODataUri] string state1, [FromODataUri] string state2)
+        public IQueryable<tvf_Quakes_State_vs_State_Result> GettvfQuakesStateVsState([FromODataUri] string state1, [FromODataUri] string state2)
         {
             return db.tvf_Quakes_State_vs_State(state1, state2);
         }
