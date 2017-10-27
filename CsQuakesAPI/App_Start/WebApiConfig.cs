@@ -15,8 +15,8 @@ namespace CsQuakesAPI
             // Web API configuration and services
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Quake>("Quakes");
-            builder.EntitySet<tvf_Quakes_State_vs_State_Result>("tvf_Quakes_State_vs_State_Result");
-            builder.EntitySet<usp_Quakes_State_vs_State_Result>("usp_Quakes_State_vs_State_Result");
+            builder.EntitySet<tvf_Quakes_State_vs_State_Result>("tvfQuakesStateVsState");
+            builder.EntitySet<usp_Quakes_State_vs_State_Result>("uspQuakesStateVsState");
 
             // Web API routes
             config.MapHttpAttributeRoutes();
